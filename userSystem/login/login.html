@@ -1,0 +1,35 @@
+<template name="loginMain">
+	{{> loginDialog}}
+
+</template>
+<template name="loginDialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="text-center">Login</h1>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<input id="input-email" type="url" class="form-control input-lg" placeholder="Email">
+				</div>
+				<div class="form-group">
+					<input id="input-password" type="password" class="form-control input-lg" placeholder="Password">
+				</div>
+				<div class="form-group">
+					<button id="sign-in" class="btn btn-primary btn-lg btn-block signin">Sign In</button>
+					<span class="pull-right"><a href="#">Register</a></span>
+					<span class="pull-left"><input type="checkbox" name="remember" id="remember"/>
+						<label for="remember">Remember Me</label>
+
+					</span>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="col-md-12">
+					<button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+

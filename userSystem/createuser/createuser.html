@@ -1,0 +1,64 @@
+<template name="createuserMain">
+	{{> admin}}
+
+	{{> createuser}}
+</template>
+<template name="createuser">
+	<table class="table table-hover table-bordered" style="width: 99%;margin: 10px auto">
+		<thead>
+		<tr>
+			<th>User Name</th>
+			<th>User Email</th>
+			<th>Password</th>
+			<th>Role</th>
+			<th>Thumb</th>
+			<th>Submit</th>
+		</tr>
+		</thead>
+		<tbody>
+		{{#each UserTable}}
+		<tr>
+			<td>{{name}}</td>
+			<td>{{email}}</td>
+			<td>{{password}}</td>
+			<td>{{role}}</td>
+			<td>
+
+			</td>
+			<!--<img  src="{{ImageLink.[0]}}" alt=""></td>-->
+			<td><span class="glyphicon glyphicon-remove" style="cursor: pointer;color: red"></span>
+				<span class="glyphicon glyphicon-edit" style="cursor: pointer;color: deepskyblue"></span>
+			</td>
+		</tr>
+		{{/each}}
+		<tr>
+			<td>
+				<input type="text" class="form-control" id="username" placeholder="User Name" required>
+			</td>
+			<td>
+				<input type="email" required class="form-control" id="email" placeholder="User Email" >
+			</td>
+			<td>
+				<input pattern=".{5,100}" type="password"  required class="form-control" id="password" placeholder="Password">
+			</td>
+			<td>
+				<select required class="form-control"  id="role">
+					<option value="">Please Select</option>
+					<option value="">admin</option>
+					<option value="">user</option>
+					<option value="">guest</option>
+				</select>
+			</td>
+			<td>
+				<input type="button" class="btn btn-primary" id="ImageLink" value="Browse">
+				<div id="ImagePreview"></div>
+			</td>
+			<td>
+				<button id="submit" type="submit" class="btn btn-primary" >Submit</button>
+				<button style="display: none" id="update" type="submit" class="btn btn-primary">Update</button>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+	<div class="alert alert-danger" id="Error" style="margin-top: 10px; display: none">Email Already Exists</div>
+</template>
