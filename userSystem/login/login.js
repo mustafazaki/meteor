@@ -10,6 +10,8 @@ var login = {
 						password = document.getElementById("input-password").value,
 						remember = $("#remember");
 					//	if (email === User.findOne().email && password === User.findOne().password) {
+					login.validation();
+
 					try {
 						User.find({}).forEach(
 							function(user) {
@@ -67,6 +69,16 @@ var login = {
 			//	console.log(localStorage);
 			remember.prop('checked', true);
 		}
+	},
+	validation:function(){
+		var email = document.getElementById("input-email"),
+			password = document.getElementById("input-password");
+		if(email.checkValidity() && password.checkValidity()){
+
+			$("input").removeClass("error");
+			$("input:invalid").addClass("error");
+		}
+
 	},
 	debug: function() {
 

@@ -44,4 +44,14 @@ Router.map(
 		//        }
 		//
 		//    });
+//		if (localStorage.userId !== "") {
+//			this.route('admin');
+//			console.log("LoggedIn");
+//		}
+//		else {
+//			this.render('login');
+//			console.log("NotLoggedIn");
+//		}
+	//	this.route('admin');
+
 	});

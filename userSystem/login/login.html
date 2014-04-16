@@ -10,10 +10,10 @@
 			</div>
 			<div class="modal-body">
 				<div class="form-group">
-					<input id="input-email" type="url" class="form-control input-lg" placeholder="Email">
+					<input id="input-email" type="email" required class="form-control input-lg" placeholder="Email">
 				</div>
 				<div class="form-group">
-					<input id="input-password" type="password" class="form-control input-lg" placeholder="Password">
+					<input id="input-password" required type="password" class="form-control input-lg" placeholder="Password">
 				</div>
 				<div class="form-group">
 					<button id="sign-in" class="btn btn-primary btn-lg btn-block signin">Sign In</button>
@@ -31,5 +31,6 @@
 			</div>
 		</div>
 	</div>
+	<div class="alert alert-danger" id="Error" style="margin-top: 10px; display: none">Please Fill Required Field</div>
 </template>
 
